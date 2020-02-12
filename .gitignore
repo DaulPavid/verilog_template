@@ -1,0 +1,15 @@
+#
+# Generated directories to exclude
+#
+build/*
+
+#
+# Generated files to exclude
+#
+*.swp
+*.so
+*.lib
+*.a
+*.ini
+*.json
+tags
