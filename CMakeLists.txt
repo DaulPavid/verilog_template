@@ -22,7 +22,7 @@ set(VERILATOR_ARGS "-Wall")
 
 # Available build options
 option(BUILD_SIM     "Build testbench simulations"  ON)
-option(BUILD_DOC     "Build / render documentation" ON)
+option(BUILD_DOC     "Build the core documentation" ON)
 option(ENABLE_FORMAL "Enable formal verification"   ON)
 
 ##################################
@@ -35,4 +35,5 @@ find_package(verilator)
 ###########################
 add_subdirectory(docs)
 add_subdirectory(rtl)
-add_subdirectory(sim)
+add_subdirectory(sim/verilog)
+add_subdirectory(sim/cpp)
