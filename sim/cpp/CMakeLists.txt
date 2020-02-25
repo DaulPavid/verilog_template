@@ -25,7 +25,7 @@ foreach(SIM ${VERILATOR_SOURCES})
     string(REPLACE ".cpp" "_sim" SIM_NAME ${SIM})
     add_executable(${SIM_NAME} ${SIM})
     target_link_libraries(${SIM_NAME}
-        PRIVATE ${VERILOG_TARGETS} ${VERILOG_SIM_TARGETS})
+        PRIVATE ${VERILOG_TARGETS} ${VERILOG_SIM_TARGETS}
+    )
     target_include_directories(${SIM_NAME} PUBLIC ${VERILATOR_INCLUDE_DIRS})
-    add_test(${SIM_NAME} ${SIM_NAME})
 endforeach()

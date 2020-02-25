@@ -15,12 +15,18 @@ module counter (i_clk, i_rst, o_count);
 
     output   reg   [(CW-1):0]  o_count;
 
-    initial o_count = 0;
+    initial o_count = 1;
     always @(posedge i_clk)
     begin
         if (i_rst)
-            o_count <= 0;
+            o_count <= 1;
         else
             o_count <= o_count + 1'b1;
     end
+    `ifdef FORMAL
+        always @(posedge i_clk)
+        begin
+            assert(o_count > 0);
+        end
+    `endif
 endmodule

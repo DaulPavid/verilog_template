@@ -1,0 +1,17 @@
+#
+# This file is part of VERILOG_TEMPLATE.
+#
+
+[options]
+mode bmc
+depth 50
+
+[engines]
+smtbmc
+
+[script]
+read -formal counter.v
+prep -top counter
+
+[files]
+../../rtl/counter.v
