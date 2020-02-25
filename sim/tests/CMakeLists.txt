@@ -21,6 +21,16 @@ if(${SMTBMC-NOTFOUND})
     message(WARNING "Unable to find Yosys-SMTBMC for testing")
 endif()
 
+# Necessary solver for Bounded Model Check (BMC) tests
+find_program(YICES
+    NAMES yices
+    HINTS /usr/bin /usr/local/bin
+)
+
+if(${YICES-NOTFOUND})
+    message(WARNING "Unable to find Yices 2 for testing")
+endif()
+
 find_program(SBY
     NAMES sby
     HINTS /usr/bin /usr/local/bin
