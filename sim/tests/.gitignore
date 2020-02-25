@@ -1,0 +1,5 @@
+#
+# Ignore any SymbiYosys generated directories
+#
+
+*/*
