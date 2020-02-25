@@ -12,32 +12,41 @@ list(APPEND SBY_CONFIGS
 #########################################
 # Find SymbiYosys and required programs #
 #########################################
+
+# Find Yosys-SMTBMC
 find_program(SMTBMC
     NAMES yosys-smtbmc
     HINTS /usr/bin /usr/local/bin
 )
-
 if(${SMTBMC-NOTFOUND})
-    message(WARNING "Unable to find Yosys-SMTBMC for testing")
+    message(WARNING "Unable to find Yosys-SMTBMC; tests might fail")
 endif()
 
-# Necessary solver for Bounded Model Check (BMC) tests
+# Find Z3 Theorem Prover
+find_program(Z3
+    NAMES z3
+    HINTS /usr/bin /usr/local/bin
+)
+if(${Z3-NOTFOUND})
+    message(WARNING "Unable to find Z3; tests might fail")
+endif()
+
+# Find Yices 2 Solver (Necessary for Bounded Model Check [BMC] tests)
 find_program(YICES
     NAMES yices
     HINTS /usr/bin /usr/local/bin
 )
-
 if(${YICES-NOTFOUND})
-    message(WARNING "Unable to find Yices 2 for testing")
+    message(WARNING "Unable to find Yices 2; tests might fail")
 endif()
 
+# Find SymbiYosys frontend
 find_program(SBY
     NAMES sby
     HINTS /usr/bin /usr/local/bin
 )
-
 if(${SBY-NOTFOUND})
-    message(WARNING "Unable to find SymbiYosys for testing")
+    message(WARNING "Unable to find SymbiYosys; tests will not run")
 else()
     foreach(CONFIG ${SBY_CONFIGS})
         add_test(NAME SBY_${CONFIG}
