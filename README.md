@@ -1,14 +1,16 @@
 # verilog_template
 
-This Verilog template contains the directory structure, cmake files, formal
-verification definitions, and documentation configuration for new projects.
+This Verilog template contains the directory structure, CMake files, formal 
+verification example, and documentation template to bootstrap new verilog
+projects
 
 ## Dependencies
 
-* C++11
 * CMake [>=3.1.x]
 * Verilator
-* SymbiYosys
+* C++11
+* Optional: SymbiYosys
+* Optional: Solvers like Z3, Yices 2, etc. for formal verification
 
 ## Building (Linux)
 
