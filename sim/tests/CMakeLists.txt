@@ -49,7 +49,8 @@ if(${SBY-NOTFOUND})
     message(WARNING "Unable to find SymbiYosys; tests will not run")
 else()
     foreach(CONFIG ${SBY_CONFIGS})
-        add_test(NAME SBY_${CONFIG}
+        string(REPLACE ".sby" "" CONFIG_NAME ${CONFIG})
+        add_test(NAME SBY_${CONFIG_NAME}
             COMMAND ${SBY} -f ${CONFIG}
             WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
         )

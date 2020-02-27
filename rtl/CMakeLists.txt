@@ -27,4 +27,5 @@ endforeach()
 ################################
 # Set the verilog target scope #
 ################################
+set(VERILOG_AUTODOC "${VERILOG_MODULES}" PARENT_SCOPE)
 set(VERILOG_TARGETS "${VERILOG_TARGETS}" PARENT_SCOPE)
