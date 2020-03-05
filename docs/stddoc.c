@@ -1,5 +1,5 @@
 //////////////////
-/// # Project page
+/// # Original project page
 /// - https://github.com/r-lyeh/stddoc.c
 ///
 /// # About
@@ -14,11 +14,13 @@
 /// - `type source*.code | stddoc`
 ///
 /// # Changelog
+/// - 2020.3 (*v1.0.2*): Fix some warnings and preparing to adopt to Verilog.
 /// - 2018.1 (*v1.0.1*): CSS overflow fixes, `///<lang\n...\n///>` quoting, `///! message warning`, help screen.
 /// - 2018.1 (*v1.0.0*): Initial version.
 ///
 /// # License
 /// - stddoc.c by rlyeh, unlicensed (~public domain).
+///   Modified by DaulPavid for other projects.
 ///
 /// # Credits
 /// - API doc style created by [Aras Pranckevičius](https://github.com/aras-p)
@@ -85,6 +87,7 @@
 /// TSQL                    |                    | Yes           |
 /// Vala                    | Yes                |               |
 /// VHDL                    |                    | Yes           |
+/// Verilog                 | Yes                |               |
 /// Wren                    | Yes                |               |
 /// Xojo                    | Yes                |               |
 
