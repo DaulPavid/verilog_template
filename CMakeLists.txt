@@ -19,7 +19,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Set Verilator arguments
-set(VERILATOR_ARGS "-Wall")
+list(APPEND VERILATOR_ARGS "-Wall" "--trace" "--stats")
 
 # Available build options
 option(BUILD_SIM     "Build testbench simulations"  ON)
