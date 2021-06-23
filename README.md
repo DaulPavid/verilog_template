@@ -12,6 +12,8 @@ projects
 * Optional: SymbiYosys
 * Optional: Solvers like Z3, Yices 2, etc. for formal verification
 
+The formal verification and testing pre-requisites are also listed [here.](https://symbiyosys.readthedocs.io/en/latest/install.html#yosys-yosys-smtbmc-and-abc)
+
 ## Building (Linux)
 
 In order to build the project, run the following commands:
